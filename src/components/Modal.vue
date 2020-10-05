@@ -100,14 +100,13 @@ export default {
       flex-direction: row;
 
       .photo {
-        min-width: 50%;
-        margin-right: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 550px;
       }
     }
 
     .photo {
-      width: 100%;
-      height: auto;
       background: black;
 
       img {
@@ -117,10 +116,14 @@ export default {
 
     .description {
       color: #333;
+      margin-right: 50px;
+      margin-left: 50px;
     }
 
     .title {
        color: #1e3d4a;
+       margin-right: 50px;
+       margin-left: 50px;
     }
   }
 </style>
