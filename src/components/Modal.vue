@@ -91,6 +91,7 @@ export default {
 .innerWrapper {
     display: flex;
     height: 100%;
+    width: 100%;
     padding: 50px;
     justify-content: center;
     align-items: center;
@@ -98,18 +99,13 @@ export default {
 
     @media (min-width: 1024px) {
         flex-direction: row;
+
         .photo {
             max-width: 500px;
         }
 
-        .description {
-            margin-right: 50px;
-            margin-left: 25px;
-        }
-
-        .title {
-            margin-right: 50px;
-            margin-left: 25px;
+        .description, .title {
+            margin-left: 30px;
         }
     }
 
