@@ -96,7 +96,11 @@ export default {
     align-items: center;
     flex-direction: column;
 
-    @media (min-width: 1920px) {
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        .photo {
+            max-width: 500px;
+        }
 
         .description {
             margin-right: 50px;
@@ -106,15 +110,6 @@ export default {
         .title {
             margin-right: 50px;
             margin-left: 25px;
-        }
-    }
-    @media (min-width: 1024px) {
-        flex-direction: row;
-
-        .photo {
-            margin-right: auto;
-            margin-left: auto;
-            max-width: 600px;
         }
     }
 
@@ -134,4 +129,5 @@ export default {
         color: #1e3d4a;
     }
 }
+
 </style>
