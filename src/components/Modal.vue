@@ -48,7 +48,7 @@ export default {
 
     @media (min-width: 800px) {
         width: 90%;
-        height: 55%;
+        height: 65%;
         left: 0;
         right: 0;
         top: 0;
@@ -57,8 +57,7 @@ export default {
     }
 
     @media (min-width: 1280px) {
-        width: 60%;
-        height: 55%;
+        width: 70%;
         left: 0;
         right: 0;
         top: 0;
@@ -116,20 +115,16 @@ export default {
         height: 100%;
         width: 100%;
 
-        .photo {
-            max-width: 500px;
-        }
-
         .description, .title {
-            padding-left: 15px;
-            padding-right: 15px;
+            padding-left: 30px;
+            padding-right: 30px;
             margin-left: auto;
             margin-right: auto;
         }
 
     }
 
-    @media (max-width: 799px) {
+    @media (max-width: 800px) {
       width: 100vw;
       height: 100vh;
     }
@@ -149,6 +144,13 @@ export default {
     .title {
         color: #1e3d4a;
     }
+}
+
+@media (max-width: 1920px) {
+  .photo {
+    max-width: 500px;
+    margin-left: 30px;
+  }
 }
 
 </style>

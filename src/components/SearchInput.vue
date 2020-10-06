@@ -49,7 +49,7 @@ export default {
 
   input:focus {
     outline: none;
-    box-shadow: 0 10px 20px -8px rgba(255,255,255, .5);
+    box-shadow: 0 8px 17px -10px rgba(255,255,255, .5);
   }
 
   .dark {
