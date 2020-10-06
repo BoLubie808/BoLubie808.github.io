@@ -40,8 +40,6 @@ export default {
 <style lang="scss" scoped>
 .outerWrapper {
     background: #f6f6f6;
-    max-width: 100%;
-    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -116,8 +114,8 @@ export default {
         width: 100%;
 
         .description, .title {
-            padding-left: 30px;
-            padding-right: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -149,7 +147,7 @@ export default {
 @media (max-width: 1920px) {
   .photo {
     max-width: 500px;
-    margin-left: 30px;
+    margin-left: 15px
   }
 }
 
