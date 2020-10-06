@@ -33,7 +33,7 @@ export default {
   mounted() {
     this.photo = this.item.links[0].href;
     this.title = this.item.data[0].title;
-    this.description = this.item.data[0].description.substring(0, 200);
+    this.description = this.item.data[0].description.substring(0, 100);
   },
 };
 </script>
@@ -46,9 +46,19 @@ export default {
     top: 0;
     left: 0;
 
-    @media (min-width: 1024px) {
-        max-width: 70%;
-        height: 60%;
+    @media (min-width: 800px) {
+        width: 90%;
+        height: 55%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    @media (min-width: 1280px) {
+        width: 60%;
+        height: 55%;
         left: 0;
         right: 0;
         top: 0;
@@ -66,6 +76,7 @@ export default {
     right: 0;
     top: 0;
     cursor: pointer;
+    transition: 0.3s ease;
 
     &::after,
     &::before {
@@ -73,7 +84,7 @@ export default {
         top: 30px;
         right: 20px;
         content: '';
-        width: 20px;
+        width: 25px;
         height: 2px;
         background: black;
         display: block;
@@ -88,25 +99,39 @@ export default {
     }
 }
 
+.close:hover {
+  opacity: 0.5;
+  transform: scale(1.5);
+}
+
 .innerWrapper {
     display: flex;
-    height: 100%;
-    width: 100%;
-    padding: 50px;
+    padding: 40px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 800px) {
         flex-direction: row;
+        height: 100%;
+        width: 100%;
 
         .photo {
             max-width: 500px;
         }
 
         .description, .title {
-            margin-left: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
         }
+
+    }
+
+    @media (max-width: 799px) {
+      width: 100vw;
+      height: 100vh;
     }
 
     .photo {
