@@ -33,29 +33,21 @@ export default {
   mounted() {
     this.photo = this.item.links[0].href;
     this.title = this.item.data[0].title;
-    this.description = this.item.data[0].description.substring(0, 100);
+    this.description = this.item.data[0].description.substring(0, 200);
   },
 };
 </script>
 <style lang="scss" scoped>
 .outerWrapper {
     background: #f6f6f6;
+    max-width: 100%;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-
-    @media (min-width: 800px) {
-        width: 90%;
-        height: 65%;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-    }
-
-    @media (min-width: 1280px) {
-        width: 70%;
+    @media (min-width: 1024px) {
+        max-width: 70%;
+        height: 60%;
         left: 0;
         right: 0;
         top: 0;
@@ -64,7 +56,6 @@ export default {
         box-shadow: 0 30px 30px -10px rgba(0,0,0, .3);
     }
 }
-
 .close {
     position: absolute;
     width: 30px;
@@ -73,82 +64,51 @@ export default {
     right: 0;
     top: 0;
     cursor: pointer;
-    transition: 0.3s ease;
-
     &::after,
     &::before {
         position: absolute;
         top: 30px;
         right: 20px;
         content: '';
-        width: 25px;
+        width: 20px;
         height: 2px;
         background: black;
         display: block;
     }
-
     &::before {
         transform: rotate(45deg);
     }
-
     &::after {
         transform: rotate(-45deg);
     }
 }
-
-.close:hover {
-  opacity: 0.5;
-  transform: scale(1.5);
-}
-
 .innerWrapper {
     display: flex;
-    padding: 40px;
+    height: 100%;
+    padding: 50px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    @media (min-width: 800px) {
+    @media (min-width: 1024px) {
         flex-direction: row;
-        height: 100%;
-        width: 100%;
-
-        .description, .title {
-            padding-left: 15px;
-            padding-right: 15px;
-            margin-left: auto;
-            margin-right: auto;
+        .photo {
+            min-width: 50%;
+            margin-right: 20px;
         }
-
     }
-
-    @media (max-width: 800px) {
-      width: 100vw;
-      height: 100vh;
-    }
-
     .photo {
+        width: 100%;
+        height: auto;
         background: black;
-
         img {
             width: 100%;
         }
     }
-
     .description {
         color: #333;
     }
-
     .title {
         color: #1e3d4a;
     }
 }
-
-@media (max-width: 1920px) {
-  .photo {
-    max-width: 500px;
-    margin-left: 15px
-  }
-}
-
 </style>
