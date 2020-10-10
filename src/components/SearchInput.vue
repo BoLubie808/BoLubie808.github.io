@@ -1,11 +1,5 @@
 <template>
-  <input
-    id="search"
-    name="search"
-    :class="{ dark }"
-    :value="value"
-    @input="handleChange"
-  />
+<input id="search" name="search" :class="{ dark }" :value="value" @input="handleChange" />
 </template>
 <script>
 export default {
@@ -28,7 +22,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  input {
+input {
     margin-top: 50px;
     display: flex;
     width: 250px;
@@ -40,24 +34,24 @@ export default {
     border: 0;
     background: none;
     border-bottom: 1px solid white;
-    transition: box-shadow .3s ease-out;
+    transition: box-shadow 0.3s ease-out;
 
     @media (min-width: 1024px) {
-      font-weight: 400;
+        font-weight: 400;
     }
-  }
+}
 
-  input:focus {
+input:focus {
     outline: none;
     box-shadow: 0 8px 17px -10px rgba(255,255,255, .5);
-  }
+}
 
-  .dark {
+.dark {
     color: #1e3d4a;
     border-bottom-color: #1e3d4a;
-  }
+}
 
-  .dark:focus {
+.dark:focus {
     box-shadow: 0 10px 20px -8px rgba(#1e3d4a, .2);
-  }
+}
 </style>
