@@ -33,7 +33,7 @@ export default {
   mounted() {
     this.photo = this.item.links[0].href;
     this.title = this.item.data[0].title;
-    this.description = this.item.data[0].description.substring(0, 200);
+    this.description = this.item.data[0].description.substring(0, 100);
   },
 };
 </script>
