@@ -81,10 +81,10 @@ export default {
     &::after {
         transform: rotate(-45deg);
     }
-    transition: 0.2s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 .close:hover {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
 }
 .innerWrapper {
     display: flex;
