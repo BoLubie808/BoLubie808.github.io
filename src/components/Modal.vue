@@ -81,7 +81,7 @@ export default {
     &::after {
         transform: rotate(-45deg);
     }
-    transition: 0.5s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 .close:hover {
   transform: rotate(180deg);

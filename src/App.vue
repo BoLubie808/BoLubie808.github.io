@@ -115,7 +115,7 @@ body {
     }
 }
 .loader {
-    margin-top: 100px;
+    margin-top: 30vh;
     display: inline-block;
     width: 64px;
     height: 64px;
