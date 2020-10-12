@@ -53,7 +53,7 @@ export default {
         top: 0;
         bottom: 0;
         margin: auto;
-        box-shadow: 0 30px 30px -10px rgba(0,0,0, .3);
+        box-shadow: 0 30px 30px -10px rgba(0,0,0, .4);
     }
 }
 .close {
@@ -81,10 +81,10 @@ export default {
     &::after {
         transform: rotate(-45deg);
     }
-    transition: 0.4s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 .close:hover {
-  transform: rotate(180deg);
+  transform: scale(1.2);
 }
 .innerWrapper {
     display: flex;
