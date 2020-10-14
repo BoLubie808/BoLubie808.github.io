@@ -81,10 +81,10 @@ export default {
     &::after {
         transform: rotate(-45deg);
     }
-    transition: 0.2s ease-in-out;
+    transition: 0.2s ease;
 }
 .close:hover {
-  transform: scale(1.2);
+  opacity: 0.5;
 }
 .innerWrapper {
     display: flex;
@@ -115,11 +115,6 @@ export default {
     .title {
         color: #1e3d4a;
         padding-left: 10px;
-    }
-    @media (max-width: 1920px) {
-      .photo {
-        max-width: 800px;
-      }
     }
 }
 </style>
